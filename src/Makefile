@@ -8,8 +8,8 @@ LIB=libyawrap
 LIB_NAME=libyawrap.so
 OBJ_NAME=yawrap.o
 
-SHARED_OPTS=-shared -o $(LIB_NAME) $(OBJ_NAME) -Wl,-Bstatic $(STATIC_LIBS) \
--Wl,-Bdynamic $(LIBS)
+SHARED_OPTS=-shared -Wl,-Bstatic $(STATIC_LIBS) \
+-Wl,-Bdynamic $(LIBS) -o $(LIB_NAME) $(OBJ_NAME)
 
 PWD=`pwd`
 
